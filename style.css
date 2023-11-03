@@ -1,0 +1,541 @@
+/****************************************
+                GENERAL
+*****************************************/
+
+/*definition of the variables*/
+:root {
+  --lightBlue: #55a9f7;
+  --blue: #3382ea;
+  --darkBlue: #1f2937;
+  --grayText: #6b7280;
+  --extraLight: #f5fbff;
+  --max-width: 2000px;
+}
+
+* {
+  padding: 0.2rem;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--lightBlue)
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #333;
+  margin-top: 4.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  padding: 0rem;
+}
+
+h1::before, h1::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 20%; 
+  height: 1px;
+  background-color: var(--blue);
+}
+
+h1::before {
+  left: 0;
+  margin-top: -1px;
+}
+
+h1::after {
+  right: 0;
+  margin-top: -1px;
+}
+
+/****************************************
+                NAVIGATOR 
+*****************************************/
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+.navContent {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  display: flex;
+  gap: 1rem;
+}
+
+.download {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  background-color: var(--darkBlue);
+  color: #ffffff;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.download:hover {
+  border: 2px solid var(--darkBlue);
+  color: var(--darkBlue);
+  background-color: #ffffff;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--lightBlue);
+  text-decoration: none;
+}
+nav .logo a:hover {
+  color: var(--darkBlue);
+  text-decoration: none;
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--lightBlue);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--darkBlue);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  background-color: var(--darkBlue);
+  border-radius: 5px;
+  color: var(--extraLight);
+}
+
+
+/****************************************
+                INTRODUCTION 
+*****************************************/
+
+.introduction {
+  background-color: var(--extraLight);
+  min-height: 80vh;
+  margin: auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.introductionText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.introductionText h3 {
+  color: #333;
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: var(--darkBlue);
+}
+
+.introductionText h3 span {
+  font-weight: 600;
+}
+
+.introductionText p {
+  line-height: 1.5rem;
+  color: var(--grayText);
+  margin-bottom: 2rem;
+}
+
+.introductionImage {
+  display: grid;
+  place-items: center;
+}
+
+.introductionImage img {
+  width: 300px;
+  height: 300px;
+  object-fit:cover;
+  border-radius: 100%;
+}
+
+
+/****************************************
+                EXPERIENCE 
+*****************************************/
+
+.experience {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.experienceImage {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  text-align: center; 
+}
+
+.experienceImage img {
+  object-fit:cover;
+  max-width: 90%; 
+  width: 100%; 
+  border-radius: 5px;
+}
+
+.experienceGrid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 80px auto;
+  gap: 2rem;
+}
+
+.experienceGrid span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: var(--lightBlue);
+  border-radius: 10px;
+}
+
+.experienceGrid h4 {
+  margin-bottom: 0rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--darkBlue);
+  
+}
+
+.experienceGrid h4 span {
+  margin-bottom: 0rem;
+  font-weight: 500; 
+  font-size: smaller;
+  color: var(--lightBlue);
+}
+
+.experienceGrid p {
+  color: var(--grayText);
+}
+
+
+/****************************************
+                EDUCATION 
+*****************************************/
+
+.education {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.educationLine {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 50px auto;
+  column-gap: 1.5rem;
+  row-gap: 0.5rem;
+  align-items: center;
+}
+
+.educationLine .number {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color:white;
+  background-color: var(--darkBlue);
+}
+
+.educationLine h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--darkBlue);
+}
+
+.educationLine p {
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+  color: var(--lightBlue);
+}
+
+.educationLine span:not(.last-child) {
+  height: 100%;
+  width: 1px;
+  margin: auto;
+  background-color: rgb(212, 231, 249);
+}
+
+.educationImage {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  text-align: center; 
+}
+
+.educationImage img {
+  object-fit:cover;
+  max-width: 90%; 
+  width: 100%; 
+  border-radius: 5px;
+}
+
+
+/****************************************
+                SKILLS 
+*****************************************/
+.skills {
+  margin-top: 5rem;
+}
+
+.skillsBox {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+}
+
+.oneSkillBox {
+  text-align: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.oneSkillBox img {
+  max-width: 75px;
+  margin: auto;
+}
+
+.oneSkillBox p {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+
+/****************************************
+                LANGUAGES 
+*****************************************/
+
+.languages {
+  max-width: 800px; 
+  margin: 0 auto;
+  padding: 30px; 
+  text-align: left;
+}
+.bar { 
+  display: grid;
+  background-color: rgb(192, 192, 192); 
+  width: 80%; 
+  border-radius: 15px;
+  margin: 0 auto; 
+  align-items: flex-start;
+} 
+
+.language { 
+  background-color: lightblue; 
+  color: white; 
+  padding: 1%; 
+  text-align: right; 
+  font-size: 20px; 
+  border-radius: 15px; 
+} 
+
+.catalan { 
+  width: 100%; 
+} 
+
+.spanish { 
+  width: 100%; 
+} 
+
+.english{
+  width: 90%;
+}
+
+.french{
+  width: 70%;
+}
+
+
+/****************************************
+                CONTACT 
+*****************************************/
+.contact {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.h2 {
+  margin: auto;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact input {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  color: var(--text-dark);
+  outline: none;
+  border: 2px solid var(--darkBlue);
+  border-radius: 1rem;
+}
+.btn {
+  min-width: 150px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  background-color: var(--darkBlue);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  color: var(--darkBlue) !important;
+  background-color: var(--extraLight);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contact .btn {
+  max-width: fit-content;
+  margin: auto;
+}
+
+/****************************************
+                RESPONSIVE CONTENT 
+*****************************************/
+
+@media (width < 750px) {
+  nav .checkbox {
+    display: block;
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: var(--extraLight);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+
+  ul li a {
+    font-size: 1.25rem;
+  }
+
+  .button {
+    margin: auto;
+  }
+
+  .introduction {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .introductionImage {
+    grid-area: 1/1/2/2;
+  }
+
+
+  .skillsBox {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .education {
+    display: flex;
+    flex-direction: column;
+  }
+  .educationContent {
+    order:1;
+  }
+
+  .educationImage {
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+    order: 2;
+  }
+
+  .experience {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .experienceGrid {
+    text-align: left;
+    order:1;
+  }
+
+  .experienceImage {
+    justify-content: center;
+    align-items:center;
+    text-align:center;
+    order: 1;
+  }
+
+  
+}
